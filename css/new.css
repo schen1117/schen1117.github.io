@@ -1,0 +1,108 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: transparent;
+}
+
+header {
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+	padding-top: 300px;
+}
+
+div	{
+	background-color: transparent;
+}
+
+.photo1 {
+	width:250px;
+	height: auto;
+}
+
+.center {
+	margin:auto;
+}
+
+.button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+footer {
+	background-color: grey;
+}
+
+.photo2 {
+	width: 400px;
+	height: auto;
+}
+
+.fling-minislide {margin:0 auto;width:800px; height:600px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 20s infinite; opacity:0; width: 100%; height: auto;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:5s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:15s;}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid transparent;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.12);
+  transition: 250ms ease-out;
+  font-size: 0.8rem;
+  padding: 1.05rem 2.13rem;
+  margin: 6px;
+  border-radius: 2px;
+  white-space: normal !important;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.22);
+}
+.btn span,
+.btn::after {
+  color: #eaeaea;
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background: #f5f5ff;
+}
+
+/* custom */
+.buttonX {
+  border-color: #anycolor;
+}
+.buttonX span {
+  color: #666666;
+}
+.buttonX::before {
+  background: #eaeaea;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s ease-out;
+}
+.buttonX:hover {
+  border-color: #eaeaea;
+}
+.buttonX:hover span {
+  color: #666666;
+}
+.buttonX:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
